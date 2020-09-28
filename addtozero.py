@@ -24,6 +24,15 @@ zero for both numbers, and they sum to zero:
 def add_to_zero(nums):
     """Given list of ints, return True if any two nums sum to 0."""
 
+    #If we have same negative and positive num, sum always equal 0
+    #O(n^2)
+    for num in nums:  
+        if -num in nums: 
+            return True
+        else:
+            continue
+    return False    
+
 
 if __name__ == '__main__':
     import doctest
